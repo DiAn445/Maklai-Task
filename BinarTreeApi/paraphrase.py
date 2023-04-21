@@ -8,7 +8,7 @@ def paraphrase(tree: Tree, limit=20) -> Tree:
     if isinstance(tree, Tree):
         result = []
         if "NP" in str(tree).split()[0]:
-            paraphrase_np_tree(tree)
+            shuffler(tree)
 
         # Recursively reducing the obj to its minimum structure
         for chunk in tree:
@@ -20,7 +20,7 @@ def paraphrase(tree: Tree, limit=20) -> Tree:
         return tree
 
 
-def paraphrase_np_tree(tree: Tree) -> Tree:
+def shuffler(tree: Tree) -> Tree:
 
     result = []
     # Iterate through each element in the tree to get a list of "NP" labels
